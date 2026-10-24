@@ -83,7 +83,7 @@ This is not a directory of crypto trading bots, token screens, payment routers, 
 ### Email
 
 * [agmail](https://agmail.shveik.dev) — receive-only email inboxes for agents, rented by the hour: pick an address, wait for a message, get the code or link extracted. Hosted MCP at `https://agmail.shveik.dev/mcp` (streamable HTTP, no key); `initialize` and `tools/list` are free. Unpaid `create_inbox` calls return an x402 payment error (stablecoins on Base, Polygon or Solana, MPP on Base); sign the payment and retry in the call `_meta`.
-* [VerifyPulse](https://verifypulse-seven.vercel.app) — real-time RFC 5322 email verification, live DNS MX lookup, disposable domain detection, zero-send SMTP handshake, and RFC 7208 SPF 10-lookup / DMARC policy auditing. Hosted MCP at `https://verifypulse-seven.vercel.app/mcp` (streamable HTTP, no key); `initialize`, `tools/list`, and `inspect_domain_dns` are free, while an unpaid `verify_email` call returns HTTP 402 settled in USDC on Base ($0.01 per call via x402 v1/v2). [Discovery](https://verifypulse-seven.vercel.app/.well-known/x402)
+* [VerifyPulse](https://verifypulse-seven.vercel.app) — email deliverability tools for agents: daily SPF, DKIM, DMARC, MX and MTA-STS monitoring with webhook alerts (free for 3 domains), sending-domain audits, domain age and expiry (RDAP), TLS certificate checks and email-authentication analysis. Hosted MCP at `https://verifypulse-seven.vercel.app/mcp` (streamable HTTP, no key); single checks are free, lists of up to 20 cost $0.02 USDC on Base via x402, and the paid `verify_email` tool takes an API-key credit or an x402 payment in `_meta["x402/payment"]`. [Discovery](https://verifypulse-seven.vercel.app/.well-known/x402)
 
 ### Verification
 
